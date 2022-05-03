@@ -5,16 +5,16 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 637848541390417920
-    m_Hash: 3776518611
+      ticks: 637849371181412752
+    m_Hash: 2076112555
   m_LockFileStatus:
     m_FilePath: C:/Users/Angelina/Troll Game/Packages/packages-lock.json
     m_PathExists: 1
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 637848541390567902
-    m_Hash: 1086298947
+      ticks: 637849371181422753
+    m_Hash: 1277459732
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
 m_LocalPackages:
@@ -99,6 +99,7 @@ m_ResolvedPackages:
     - 7.0.0-pre.3
     - 7.0.0-pre.4
     - 7.0.0
+    - 8.0.0-pre.1
     compatible:
     - 5.0.3
     - 5.0.4
@@ -507,6 +508,7 @@ m_ResolvedPackages:
     - 3.0.10
     - 3.0.12
     - 3.0.13
+    - 3.0.14
     compatible:
     - 3.0.6
     - 3.0.7
@@ -514,7 +516,8 @@ m_ResolvedPackages:
     - 3.0.10
     - 3.0.12
     - 3.0.13
-    verified: 3.0.13
+    - 3.0.14
+    verified: 3.0.14
   dependencies:
   - name: com.unity.ext.nunit
     version: 1.0.6
@@ -748,6 +751,7 @@ m_ResolvedPackages:
     - 1.1.29
     - 1.1.30
     - 1.1.31
+    - 2.0.1-exp.1
     - 2.0.1-pre.12
     - 2.0.1-pre.18
     compatible:
@@ -757,6 +761,7 @@ m_ResolvedPackages:
     - 1.1.29
     - 1.1.30
     - 1.1.31
+    - 2.0.1-exp.1
     - 2.0.1-pre.12
     - 2.0.1-pre.18
     verified: 1.1.31
@@ -3328,6 +3333,7 @@ m_ResolvedPackages:
     - 7.0.0-pre.3
     - 7.0.0-pre.4
     - 7.0.0
+    - 8.0.0-pre.1
     compatible:
     - 5.0.0
     verified: 5.0.0
@@ -3438,6 +3444,7 @@ m_ResolvedPackages:
     - 3.2.15
     - 3.2.16
     - 3.2.17
+    - 3.2.18
     - 4.0.0
     - 4.0.1
     - 4.1.0
@@ -3463,6 +3470,7 @@ m_ResolvedPackages:
     - 5.1.0
     - 5.1.1
     - 5.2.0
+    - 5.2.1
     - 6.0.0-pre.1
     - 6.0.0-pre.2
     - 6.0.1
@@ -3477,10 +3485,12 @@ m_ResolvedPackages:
     - 7.0.2
     - 7.0.3
     - 7.0.4
+    - 7.0.5
     - 8.0.0-pre.3
     - 8.0.0-pre.4
     - 8.0.0
     - 8.0.1
+    - 9.0.0-pre.1
     compatible:
     - 6.0.3
     - 6.0.4
