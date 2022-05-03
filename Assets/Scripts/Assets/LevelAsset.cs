@@ -4,14 +4,13 @@ using UnityEngine;
 
 namespace Assets
 {
-    [CreateAssetMenu(menuName = "Assets", fileName = "Level Asset/Camera Asset")]
+    [CreateAssetMenu(menuName = "Assets/Levels", fileName = "Level Asset")]
 
 
     public class LevelAsset : ScriptableObject
     {
-       //здесь в формате переменных написать систему ивентов на диалоговые окна и систему сохранений
-            
-        
+
+        public SceneAsset SceneAsset;
     }
 
 }

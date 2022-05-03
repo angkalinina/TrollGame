@@ -4,13 +4,10 @@ using UnityEngine;
 
 namespace Assets
 {
- [CreateAssetMenu(fileName = "Asset Root", menuName = "Assets")]
+ [CreateAssetMenu(menuName = "Assets/AssetRoot", fileName = "AssetRoot")]
     public class AssetRoot : ScriptableObject
     {
         public List<LevelAsset> Levels;
-        
-
-
     }
 
 }
