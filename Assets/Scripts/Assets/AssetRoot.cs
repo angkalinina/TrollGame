@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEditor;
 
 namespace Assets
 {
@@ -8,6 +9,9 @@ namespace Assets
     public class AssetRoot : ScriptableObject
     {
         public List<LevelAsset> Levels;
+
+        public SceneAsset UIScene;
+        
     }
 
 }

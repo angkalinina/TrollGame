@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Assets;
+using UnityEditor;
 
 namespace Assets
 {
@@ -11,6 +13,11 @@ namespace Assets
     {
 
         public SceneAsset SceneAsset;
+        
+
+        //public int StartHealth;
+        //public int StartMoney;
+
     }
 
 }

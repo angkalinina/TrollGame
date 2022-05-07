@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using Assets;
 using UnityEngine.SceneManagement;
+using System;
+using Object = UnityEngine.Object;
 
 namespace Runtime
 {
@@ -18,8 +20,6 @@ namespace Runtime
         public static AssetRoot AssetRoot => s_AssetRoot;
         public static LevelAsset CurrentLevel => s_CurrentLevel;
 
-
-
         public static void SetAssetRoot(AssetRoot assetRoot)
         {
             s_AssetRoot = assetRoot;
@@ -28,21 +28,31 @@ namespace Runtime
         public static void StartLevel(LevelAsset levelAsset)
         {
             s_CurrentLevel = levelAsset;
-            SceneManager.LoadScene(levelAsset.SceneAsset.name);
-            s_Player = new Player();
+            AsyncOperation operation = SceneManager.LoadSceneAsync(levelAsset.SceneAsset.name);
+            operation.completed += StartPlayer;
         }
 
-        private static void StartPlayer()
+        private static void StartPlayer(AsyncOperation operation)
         {
-
+            if (!operation.isDone)
+            {
+                throw new Exception("Can't load scene");
+            }
             s_Player = new Player();
             s_Runner = Object.FindObjectOfType<Runner>();
             s_Runner.StartRunning();
+
+            //SceneManager.LoadScene(AssetRoot.UIScene.name, LoadSceneMode.Additive);
         }
 
         public static void StopPlayer()
         {
             s_Runner.StopRunning();
         }
+
+        
+
+       
+
     }
 }
