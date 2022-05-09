@@ -12,3 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be9769abdfa38c7478b0497720159795, type: 3}
   m_Name: Spawn Drones Asset
   m_EditorClassIdentifier: 
+  SpawnDrones:
+  - EnemyAsset: {fileID: 11400000, guid: bbffbd9c7d6f59f4ab9da883928c7c97, type: 2}
+    Count: 0
+    TimeBetweenSpawn: 0
+    TimeBeforeStartDrones: 0

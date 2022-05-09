@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Runtime;
 using Assets;
+using Enemy;
 
 namespace EnemySpawn
 {
@@ -43,23 +44,33 @@ public class EnemySpawnController : IController
 
                 for (int i = 0; i < drones.Count; i++)
                 { 
-                
+                    if (passedTime >= timeToSpawn && m_PassedTimePreviousFrame < timeToSpawn) 
+                    {
+                        // Spawn Enemy return;
+                    }
+
+                    if (i < drones.Count - 1)
+                    { 
+                        timeToSpawn += drones.TimeBetweenSpawn;
+                    }
+                    
                 }
             }
 
-            if (passedTime >= timeToSpawn && m_PassedTimePreviousFrame < timeToSpawn)
-            {
-                // Spawn Enemy
-                return;
-            }
+            
 
             m_PassedTimePreviousFrame = passedTime;           
 
     }
 
         private void SpawnEnemy(EnemyAsset asset)
-        { 
-        
+        {
+            //EnemyView view = Object.Instantiate(asset.ViewPrefab);
+            EnemyData data = new EnemyData(asset);
+
+            //data.AttachView(view);
+
+            Game.Player.EnemySpawned(data);
         }
   }
 }
