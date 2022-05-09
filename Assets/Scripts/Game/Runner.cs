@@ -2,6 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System;
+using Enemy;
+using EnemySpawn;
+
 
 namespace Runtime
 {
@@ -36,6 +39,11 @@ namespace Runtime
         private void CreateAllControllers()
         {
             m_Controllers = new List<IController>();
+            { 
+                //new EnemySpawnController(SpawnDronesAsset spawnDrones, Grid grid);
+                new MovementController();
+            }
+            
         }
 
         private void OnStartControllers()
