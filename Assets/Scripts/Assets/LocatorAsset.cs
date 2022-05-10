@@ -8,7 +8,7 @@ namespace Locator
 
     public class LocatorAsset : ScriptableObject
     {
-
+        public LocatorView ViewPrefab;
     }
 
 }

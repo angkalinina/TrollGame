@@ -6,7 +6,7 @@ namespace Locator
 {
     public class LocatorView : MonoBehaviour
     {
-        [SerializeField]
+        
 
         private LocatorData m_Data; 
         private LocatorData Data => m_Data;
