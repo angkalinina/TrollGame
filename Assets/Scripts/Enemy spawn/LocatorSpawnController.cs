@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class LocatorSpawn : MonoBehaviour
-{
+//public class LocatorSpawn : MonoBehaviour
+//{
     
-}
+//}

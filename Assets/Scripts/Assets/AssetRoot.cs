@@ -1,18 +1,15 @@
-using System.Collections;
 using System.Collections.Generic;
-using UnityEngine;
 using UnityEditor;
+using UnityEngine;
+using UnityEngine.SceneManagement;
 
 namespace Assets
 {
- [CreateAssetMenu(menuName = "Assets/AssetRoot", fileName = "AssetRoot")]
+    [CreateAssetMenu(menuName = "Assets/Asset Root", fileName = "Asset Root")]
     public class AssetRoot : ScriptableObject
     {
-        public List<LevelAsset> Levels;
-
         public SceneAsset UIScene;
-        
+        public List<LevelAsset> Levels;
     }
-
 }
-   
+
