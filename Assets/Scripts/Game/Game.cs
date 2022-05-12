@@ -28,8 +28,8 @@ namespace Runtime
         public static void StartLevel(LevelAsset levelAsset)
         {
             s_CurrentLevel = levelAsset;
-            //AsyncOperation operation = SceneManager.LoadSceneAsync(levelAsset.SceneAsset.name);
-            //operation.completed += StartPlayer;
+            AsyncOperation operation = SceneManager.LoadSceneAsync(levelAsset.SceneAsset.name);
+            operation.completed += StartPlayer;
         }
 
         private static void StartPlayer(AsyncOperation operation)
@@ -42,7 +42,7 @@ namespace Runtime
             s_Runner = Object.FindObjectOfType<Runner>();
             s_Runner.StartRunning();
 
-            //SceneManager.LoadScene(AssetRoot.UIScene.name, LoadSceneMode.Additive);
+            SceneManager.LoadScene(AssetRoot.UIScene.name, LoadSceneMode.Additive);
         }
 
         public static void StopPlayer()

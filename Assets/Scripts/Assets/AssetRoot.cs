@@ -9,7 +9,7 @@ namespace Assets
     public class AssetRoot : ScriptableObject
     {
         public SceneAsset UIScene;
-        public List<LevelAsset> Levels;
+        public List<LevelAsset> Level;
     }
 }
 

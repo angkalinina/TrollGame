@@ -19,7 +19,7 @@ namespace Runtime
         {
             if (Input.GetKeyDown(KeyCode.Space))
             {
-                Game.StartLevel(m_AssetRoot.Levels[0]);
+                Game.StartLevel(m_AssetRoot.Level[0]);
                 Debug.Log("Пошло");
             }
         }

@@ -7,9 +7,13 @@ namespace Enemy
     [CreateAssetMenu(menuName = "Assets/Enemy", fileName = "Enemy Asset")]
     public class EnemyAsset : ScriptableObject
     {
-        //public int StartHealth;
-        //public EnemyView ViewPrefub;
-       
+
+        public EnemyView ViewPrefub;
+        public int Damage;
+        public int Reward;
+
+        public float Speed;
+
 
     }
 

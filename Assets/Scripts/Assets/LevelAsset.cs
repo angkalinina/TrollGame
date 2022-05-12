@@ -6,17 +6,17 @@ using UnityEditor;
 
 namespace Assets
 {
-    [CreateAssetMenu(menuName = "Assets/Levels", fileName = "Level Asset")]
+    [CreateAssetMenu(menuName = "Assets/Level", fileName = "Level Asset")]
 
 
     public class LevelAsset : ScriptableObject
     {
 
-        //public SceneAsset SceneAsset;
+        public SceneAsset SceneAsset;
         
 
-        //public int StartHealth;
-        //public int StartMoney;
+        public int StartHealth;
+        public int StartMoney;
 
     }
 

@@ -11,7 +11,7 @@ namespace Runtime
     public class Runner : MonoBehaviour
     {
         private List<IController> m_Controllers;
-        public bool m_IsRunning = false;
+        private bool m_IsRunning = false;
 
         private void Update()
         {
