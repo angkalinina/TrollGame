@@ -70,7 +70,7 @@ public class EnemySpawnController : IController
 
             //data.AttachView(view);
 
-            Game.Player.EnemySpawned(data);
+            //Game.Player.EnemySpawned(data);
         }
   }
 }

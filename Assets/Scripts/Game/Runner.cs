@@ -4,7 +4,7 @@ using UnityEngine;
 using System;
 using Enemy;
 using EnemySpawn;
-
+using Main;
 
 namespace Runtime
 {

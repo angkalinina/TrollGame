@@ -8,9 +8,16 @@ namespace Runtime
     {
         void OnStart();
         void OnStop();
+        
+        
         void Tick();
     
     }
+
+    public interface ISpeakable
+        {
+        void Speak();
+        }
     
 }
 

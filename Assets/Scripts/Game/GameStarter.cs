@@ -7,8 +7,7 @@ namespace Runtime
 {
     public class GameStarter : MonoBehaviour
     {
-        [SerializeField] 
-        private AssetRoot m_AssetRoot;
+        [SerializeField] private AssetRoot m_AssetRoot;
 
         private void Awake()
         {
@@ -20,7 +19,7 @@ namespace Runtime
             if (Input.GetKeyDown(KeyCode.Space))
             {
                 Game.StartLevel(m_AssetRoot.Level[0]);
-                Debug.Log("Пошло");
+                Debug.Log("Срабортал GameStarter");
             }
         }
     }

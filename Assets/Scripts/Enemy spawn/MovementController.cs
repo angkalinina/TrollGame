@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Enemy
+namespace Main
 {
     public class MovementController : IController
     {
@@ -17,10 +17,10 @@ namespace Enemy
 
         public void Tick()
         {
-            foreach (EnemyData data in Game.Player.EnemyDatas)
-            {
-                data.View.MovementAgent.TickMovement();
-            }
+            // foreach (EnemyData data in Game.Player.EnemyDatas)
+            //{
+            // data.View.MovementAgent.TickMovement();
+            //}
         }
     }
 }
