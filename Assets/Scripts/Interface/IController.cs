@@ -8,8 +8,6 @@ namespace Runtime
     {
         void OnStart();
         void OnStop();
-        
-        
         void Tick();
     
     }

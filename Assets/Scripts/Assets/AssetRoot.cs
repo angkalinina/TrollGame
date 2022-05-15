@@ -8,8 +8,14 @@ namespace Assets
     [CreateAssetMenu(menuName = "Assets/Asset Root", fileName = "Asset Root")]
     public class AssetRoot : ScriptableObject
     {
-        public SceneAsset UIScene;
-        public List<LevelAsset> Level;
+        public SceneAsset Scenes;
+
+        public List<LevelAsset> Levels;
+
+        //музыка
+        //окружение
+
+        
     }
 }
 

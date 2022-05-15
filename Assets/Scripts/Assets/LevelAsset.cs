@@ -15,8 +15,7 @@ namespace Assets
         public SceneAsset SceneAsset;
         
 
-        public int StartHealth;
-        public int StartMoney;
+        
 
     }
 

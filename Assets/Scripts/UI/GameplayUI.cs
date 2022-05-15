@@ -11,14 +11,34 @@ namespace UIGameplayInfo
 {
     public class GameplayUI : MonoBehaviour
     {
-        public GameObject PauseButton;
-        public GameObject ResumeButton;
-        public GameObject MainMenuButton;
-        public GameObject PauseMenu;
+
+        public GameObject Button;
+
+        private float ScreenWidth;
+        private float ScreenHeight;
+        private float ButtonX;
+        private float ButtonY;
+
+
+        void OnGUI()
+        {
+            
+            if (GUI.Button(new Rect(ButtonX, ButtonY, ScreenWidth, ScreenHeight), "click button"))
+            { 
+            //действие
+            }
+        }
+
+
+
+        public static GameObject PauseButton;
+        public static GameObject ResumeButton;
+        public static GameObject MainMenuButton;
+        public static GameObject PauseMenu;
 
         private static Runner s_Runner;
 
-        public void Resume()
+        public static void Resume()
         {
 
             PauseButton.SetActive(true);
@@ -27,7 +47,7 @@ namespace UIGameplayInfo
 
         }
 
-        public void Pause()
+        public static void Pause()
         {
             s_Runner.StopRunning();
             PauseMenu.SetActive(true);
@@ -35,10 +55,11 @@ namespace UIGameplayInfo
             MainMenuButton.SetActive(true);
         }
 
-        public void ToMainMenu()
+        public static void ToMainMenu(string scenename)
         {
-
-            //SceneManager.LoadScene(AssetRoot.UIScene.name, LoadSceneMode.Additive);
+            SceneManager.LoadScene(scenename); 
         }
+
+        
     }
 }
