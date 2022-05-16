@@ -12,10 +12,7 @@ namespace Runtime
     
     }
 
-    public interface ISpeakable
-        {
-        void Speak();
-        }
+    
     
 }
 

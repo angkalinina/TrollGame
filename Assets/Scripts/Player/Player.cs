@@ -1,22 +1,43 @@
-using Enemy;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
-
-namespace Runtime
+namespace Player
 {
-    public class Player 
+public class Player : MonoBehaviour
+
     {
+        private PlayerData playerData;
 
-       //private List<EnemyData> m_EnemyDatas = new List<EnemyData>();
-        //public IReadOnlyList<EnemyData> EnemyDatas => m_EnemyDatas;
+        private void Start()
+        {
+            playerData = Player—ondition.GetData();
+        }
 
-        
+        private void OnDestroy()
+        {
+            Player—ondition.SaveData(playerData);
+        }
 
-        //public void EnemySpawned(EnemyData data)
-        //{
-           // m_EnemyDatas.Add(data);
-        //}
+        private void Update()
+        {
+            if (Input.GetMouseButtonDown(0))
+            {
+                ModifyScore(+1);
+            }
+
+            else if (Input.GetMouseButtonDown(1))
+            {
+                playerData = Player—ondition.GetNewPlayerData();
+            }
+        }
+
+        public void ModifyScore(int amount)
+        {
+            playerData.Score += amount;
+        }
+
     }
 }
+

@@ -36,7 +36,7 @@ namespace UIGameplayInfo
         public static GameObject MainMenuButton;
         public static GameObject PauseMenu;
 
-        private static Runner s_Runner;
+        
 
         public static void Resume()
         {
@@ -49,7 +49,7 @@ namespace UIGameplayInfo
 
         public static void Pause()
         {
-            s_Runner.StopRunning();
+            
             PauseMenu.SetActive(true);
             ResumeButton.SetActive(true);
             MainMenuButton.SetActive(true);

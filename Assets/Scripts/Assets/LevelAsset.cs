@@ -12,7 +12,7 @@ namespace Assets
     public class LevelAsset : ScriptableObject
     {
 
-        public SceneAsset SceneAsset;
+      
         
 
         
