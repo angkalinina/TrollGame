@@ -9,7 +9,7 @@ namespace Runtime
 public class GameStarter : MonoBehaviour
 {
     public static GameStarter instance;
-    public event Action gameStarted, gamePaused, gameLose, gameNextScene;
+    public event Action gameStarted, gamePaused;
     
     private List<IController> _Controllers; 
     
@@ -22,32 +22,26 @@ public class GameStarter : MonoBehaviour
     private void Awake()
     {
         instance = this;
+        StartGame();
     }
 
     private void Update()
     {
-        if (isRunning == false)
+        if (!isRunning == false)
         {
-            if (Input.GetKeyDown(KeyCode.Space))
-            {
-                isRunning = true;
-                isPaused = false;
-                StartGame(); 
                 TickControllers();
-                    Debug.Log("Запустился стартер");
-
-            }
-
-                return;
+                
         }
-
-    }
+            return;
+        }
     public void StartGame()
     {
         gameStarted?.Invoke();
             CreateAllControllers();
             OnStartControllers();
-            
+            isRunning = true;
+            isPaused = false;
+            Debug.Log("Запустился стартер");
         }
 
         public void GameOver()

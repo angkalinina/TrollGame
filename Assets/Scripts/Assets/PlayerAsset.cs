@@ -9,7 +9,7 @@ namespace Player
     public class PlayerAsset : ScriptableObject
     {
         [SerializeField] GameObject Player;
-        public PlayerView ViewPrefub;
+        //public PlayerView ViewPrefub;
 
         
 

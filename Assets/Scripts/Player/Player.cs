@@ -20,17 +20,20 @@ public class Player : MonoBehaviour
             PlayerÑondition.SaveData(playerData);
         }
 
+        //âçàèìîäåéñòâèå ñ òğèããåğîì
+        //if (Input.GetMouseButtonDown(0))
+        //{
+        // ModifyScore(+1);
+        //}
+
+        //else if (Input.GetMouseButtonDown(1))
+        // {
+        //playerData = PlayerÑondition.GetNewPlayerData();
+        //}
+
         private void Update()
         {
-            if (Input.GetMouseButtonDown(0))
-            {
-                ModifyScore(+1);
-            }
-
-            else if (Input.GetMouseButtonDown(1))
-            {
-                playerData = PlayerÑondition.GetNewPlayerData();
-            }
+            
         }
 
         public void ModifyScore(int amount)
