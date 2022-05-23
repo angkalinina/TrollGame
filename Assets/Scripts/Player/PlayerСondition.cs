@@ -27,7 +27,7 @@ internal class PlayerСondition
     private static PlayerData LoadFromPlayerPrefs()
     {
         int score = PlayerPrefs.GetInt("Score");
-        int movementSpeed = PlayerPrefs.GetInt("MovementSpeed");
+        float movementSpeed = PlayerPrefs.GetFloat("MovementSpeed");
 
         return new PlayerData()
         {
@@ -39,7 +39,7 @@ internal class PlayerСondition
     internal static void SaveData(PlayerData playerData)
     {
         PlayerPrefs.SetInt("Score", playerData.Score);
-        PlayerPrefs.SetInt("MovementSpeed", playerData.MovementSpeed);
+        PlayerPrefs.SetFloat("MovementSpeed", playerData.MovementSpeed);
     }
    
 }

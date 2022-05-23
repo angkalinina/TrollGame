@@ -6,7 +6,8 @@ namespace Player
 { 
 public class PlayerData
     {
-        public int MovementSpeed { get; set; }
+        
+        public float MovementSpeed { get; set; }
         public int Score { get; set; }
     }
 

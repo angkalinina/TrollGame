@@ -5,8 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class EventManager : MonoBehaviour
 {
-    public delegate void ClickActon();
-    public static event ClickActon OnClicked;
+    //public delegate void ClickActon();
+    //public static event ClickActon OnClicked;
 
     // private void OnGUI()
     //{
