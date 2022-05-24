@@ -20,10 +20,10 @@ namespace Background
         {
             cameraTransform = Camera.main.transform;
             lastCameraPosition = cameraTransform.position;
-            Sprite sprite = GetComponent<SpriteRenderer>().sprite;
-            Texture2D texture = sprite.texture;
-            textureUnitSizeX = texture.width / sprite.pixelsPerUnit;
-            textureUnitSizeY = texture.width / sprite.pixelsPerUnit;
+            //Sprite sprite = GetComponent<SpriteRenderer>().sprite;
+            //Texture2D texture = sprite.texture;
+            //textureUnitSizeX = texture.width / sprite.pixelsPerUnit;
+            //textureUnitSizeY = texture.width / sprite.pixelsPerUnit;
         }
 
         private void LateUpdate()
