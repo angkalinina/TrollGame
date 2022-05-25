@@ -5,17 +5,25 @@ using UnityEngine.EventSystems;
 
 public class MovementJoystick : MonoBehaviour
 {
-    public GameObject joystick;
+    [SerializeField] public GameObject joystick;
     public GameObject joystickBG;
     public Vector2 joystickVec;
     private Vector2 joystickTouchPos;
     private Vector2 joystickOriginalPos;
     private float joystickRadius;
 
+    float xMin = -8;
+    float xMax = 8;
+    float yMin = -2;
+    float yMax = -3;
+
+    [SerializeField] private float padding;
+
     void Start()
     {
         joystickOriginalPos = joystickBG.transform.position;
         joystickRadius = joystickBG.GetComponent<RectTransform>().sizeDelta.y / 1;
+        moveBorders();
     }
 
     public void PointerDown()
@@ -50,5 +58,24 @@ public class MovementJoystick : MonoBehaviour
         joystick.transform.position = joystickOriginalPos;
         joystickBG.transform.position = joystickOriginalPos;
     }
+
+    private void moveBorders()
+
+    {
+
+        Camera gameCamera = Camera.main;
+
+        xMin = gameCamera.ViewportToWorldPoint(new Vector3(0, 0, 0)).x + padding;
+
+        xMax = gameCamera.ViewportToWorldPoint(new Vector3(1, 0, 0)).x - padding;
+
+        yMin = gameCamera.ViewportToWorldPoint(new Vector3(0, 0, 0)).y + padding;
+
+        yMax = gameCamera.ViewportToWorldPoint(new Vector3(0, 1, 0)).y - padding;
+
+
+
     }
-    
+
+}
+
