@@ -21,7 +21,7 @@ public class GameStarter : MonoBehaviour
 
     private void Awake()
     {
-        instance = this;
+        
         StartGame();
     }
 
@@ -114,7 +114,7 @@ public class GameStarter : MonoBehaviour
                     Debug.LogError(e);
                 }
             }
-            Debug.Log("Контроллеры остановились");
+            Debug.Log("Stop Controllers");
         }
         
     }
