@@ -4,42 +4,46 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-internal class PlayerСondition 
+namespace Player
 {
-    internal static PlayerData GetData()
+
+    internal class PlayerCondition
     {
-        if (PlayerPrefs.HasKey("Score") == false)
+        internal static PlayerData GetData()
         {
-            return GetNewPlayerData();
+            if (PlayerPrefs.HasKey("Score") == false)
+            {
+                return GetNewPlayerData();
+            }
+
+            return LoadFromPlayerPrefs();
         }
 
-        return LoadFromPlayerPrefs();
-    }
-
-    public static PlayerData GetNewPlayerData()
-    {
-        return new PlayerData()
+        public static PlayerData GetNewPlayerData()
         {
-            Score = 1
-        };
-    }
+            return new PlayerData()
+            {
+                Score = 1
+            };
+        }
 
-    private static PlayerData LoadFromPlayerPrefs()
-    {
-        int score = PlayerPrefs.GetInt("Score");
-        float movementSpeed = PlayerPrefs.GetFloat("MovementSpeed");
-
-        return new PlayerData()
+        private static PlayerData LoadFromPlayerPrefs()
         {
-            Score = score,
-            MovementSpeed = movementSpeed
-    };
-    }
+            int score = PlayerPrefs.GetInt("Score");
+            float movementSpeed = PlayerPrefs.GetFloat("MovementSpeed");
 
-    internal static void SaveData(PlayerData playerData)
-    {
-        PlayerPrefs.SetInt("Score", playerData.Score);
-        PlayerPrefs.SetFloat("MovementSpeed", playerData.MovementSpeed);
+            return new PlayerData()
+            {
+                Score = score,
+                MovementSpeed = movementSpeed
+            };
+        }
+
+        internal static void SaveData(PlayerData playerData)
+        {
+            PlayerPrefs.SetInt("Score", playerData.Score);
+            PlayerPrefs.SetFloat("MovementSpeed", playerData.MovementSpeed);
+        }
+
     }
-   
 }

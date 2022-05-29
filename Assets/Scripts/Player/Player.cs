@@ -12,12 +12,12 @@ public class Player : MonoBehaviour
 
         private void Start()
         {
-            playerData = PlayerÑondition.GetData();
+            playerData = PlayerCondition.GetData();
         }
 
         private void OnDestroy()
         {
-            PlayerÑondition.SaveData(playerData);
+            PlayerCondition.SaveData(playerData);
         }
 
         //âçàèìîäåéñòâèå ñ òğèããåğîì
@@ -28,7 +28,7 @@ public class Player : MonoBehaviour
 
         //else if (Input.GetMouseButtonDown(1))
         // {
-        //playerData = PlayerÑondition.GetNewPlayerData();
+        //playerData = PlayerCondition.GetNewPlayerData();
         //}
 
         private void Update()

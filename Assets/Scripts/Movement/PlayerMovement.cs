@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using InputSystem;
 
 [RequireComponent(typeof(Rigidbody2D), typeof(BoxCollider2D))]
 
@@ -65,8 +66,6 @@ public class PlayerMovement : MonoBehaviour
         BorderMinY = gameCamera.ViewportToWorldPoint(new Vector3(0, 0, 0)).y + padding;
 
         BorderMaxY = gameCamera.ViewportToWorldPoint(new Vector3(0, 1, 0)).y - padding;
-
-
 
     }
 
