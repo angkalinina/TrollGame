@@ -4,6 +4,7 @@ using UnityEngine;
 
 public static class JoystickUtility 
 {
+    internal static Vector3 Return;
 
     public static Vector3 TouchPosition(this Canvas _Canvas, int touchID)
     {
